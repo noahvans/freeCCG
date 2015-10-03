@@ -1,0 +1,4 @@
+﻿btnNewTable	New Game	我来开一桌
+btnJoinTable	Join Game	一起玩
+btnManageCards	My Cards	看看牌册
+btnSettingsAbout	Settings	设置

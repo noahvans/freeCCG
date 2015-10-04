@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Noahv.Game.Fccg
 {
     //A class to store game settings
-    [Serializable]
+    [System.Serializable]
     public class GameSettings
     {
         private static GameSettings m_Current = null;

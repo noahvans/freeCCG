@@ -2,3 +2,6 @@
 btnJoinTable	Join Game	一起玩
 btnManageCards	My Cards	看看牌册
 btnSettingsAbout	Settings	设置
+btnSaveSettings	Save	保存
+btnExitSettings	Back	后退
+btnAbout	About	关于

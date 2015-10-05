@@ -17,7 +17,7 @@
 	<string name="smssdk_error_desc_524">Request verification code messages too frequently</string>
 	<string name="smssdk_error_desc_525">Invalid signature</string>
 	<string name="smssdk_error_desc_526">Insufficient balance</string>
-	
+
 	<string name="smssdk_error_detail_511">The request cannot be identified</string>
 	<string name="smssdk_error_detail_512">Server access denied, or refused to operate</string>
 	<string name="smssdk_error_detail_513">Request Appkey does not exist or is disabled</string>

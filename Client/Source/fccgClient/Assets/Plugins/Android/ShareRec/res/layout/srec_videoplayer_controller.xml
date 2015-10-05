@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/llBar"
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
-        android:background="#e6ffffff" >
+        android:background="#e6ffffff">
 
         <LinearLayout
             android:id="@+id/llPlay"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingLeft="6dp"
-            android:paddingRight="6dp" >
+            android:paddingRight="6dp">
 
             <ImageView
                 android:id="@+id/ivPlay"
@@ -71,7 +71,7 @@
     <RelativeLayout
         android:id="@+id/llTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivCloseBack"
@@ -162,14 +162,14 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/srec_fluency_back"
             android:orientation="vertical"
-            android:visibility="invisible" >
+            android:visibility="invisible">
 
             <LinearLayout
                 android:id="@+id/tvFluent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/srec_crop_sb_item_back"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/srec_crop_sb_item_back"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/srec_crop_sb_item_back"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -276,5 +276,4 @@
         android:paddingTop="15dp"
         android:scaleType="fitXY"
         android:src="@drawable/srec_sb_close" />
-
 </RelativeLayout>

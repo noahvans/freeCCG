@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/srec_report_dim"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <View
         android:id="@+id/vShareDim"
@@ -16,13 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/srec_share_panel_back"
-        android:padding="13dp" >
+        android:padding="13dp">
 
         <RelativeLayout
             android:id="@+id/rlShareThumb"
             android:layout_width="181dp"
             android:layout_height="103dp"
-            android:background="#ffe3e2e8" >
+            android:background="#ffe3e2e8">
 
             <cn.sharerec.gui.components.AsyncImageView
                 android:id="@+id/aivShareThumb"
@@ -96,5 +96,4 @@
             android:textColor="#ff000000"
             android:textSize="18dp" />
     </RelativeLayout>
-
 </LinearLayout>

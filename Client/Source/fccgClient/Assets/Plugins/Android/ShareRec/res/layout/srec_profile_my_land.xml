@@ -5,12 +5,12 @@
     android:orientation="vertical"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
-    android:paddingTop="5dp" >
+    android:paddingTop="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        android:background="@drawable/srec_profile_nick_bg_land" >
+        android:background="@drawable/srec_profile_nick_bg_land">
 
         <cn.sharerec.gui.components.AsyncImageView
             android:id="@+id/aivProfileAvatar"
@@ -41,13 +41,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        android:background="@drawable/srec_profile_conf_bg_land" >
+        android:background="@drawable/srec_profile_conf_bg_land">
 
         <LinearLayout
             android:id="@+id/rlProfileVideo"
             android:layout_width="176dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvProfileVideoCount"
@@ -91,5 +91,4 @@
             android:background="@drawable/srec_profile_conf"
             android:visibility="invisible" />
     </LinearLayout>
-
 </LinearLayout>

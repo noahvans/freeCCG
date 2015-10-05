@@ -3,7 +3,7 @@
     android:id="@+id/bsbContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/srec_crop_sb_item_back_nor" >
+    android:background="@drawable/srec_crop_sb_item_back_nor">
 
     <LinearLayout
         android:id="@+id/llLeft"
@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvFrom"
@@ -44,7 +44,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvTo"
@@ -114,5 +114,4 @@
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/llLeft"
         android:background="@drawable/srec_ve_progress" />
-
 </RelativeLayout>

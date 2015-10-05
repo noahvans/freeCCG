@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.IO;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
 
 namespace Noahv.Game.Fccg
 {
@@ -54,6 +54,7 @@ namespace Noahv.Game.Fccg
 
         //Language
         private UILanguage m_Language = UILanguage.en_US;
+
         public UILanguage Language
         {
             get { return m_Language; }

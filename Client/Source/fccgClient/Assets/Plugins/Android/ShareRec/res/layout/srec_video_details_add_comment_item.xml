@@ -6,7 +6,7 @@
     android:paddingBottom="10dp"
     android:paddingLeft="14dp"
     android:paddingRight="14dp"
-    android:paddingTop="10dp" >
+    android:paddingTop="10dp">
 
     <EditText
         android:id="@+id/etComment"
@@ -31,5 +31,4 @@
         android:text="@string/srec_comment"
         android:textColor="#ffb3b3b3"
         android:textSize="16dp" />
-
 </LinearLayout>

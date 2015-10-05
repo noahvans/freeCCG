@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffffff"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <cn.sharerec.gui.components.AsyncImageView
             android:id="@+id/aivAvatar"
@@ -26,7 +26,7 @@
             android:layout_marginRight="13dp"
             android:layout_toRightOf="@id/aivAvatar"
             android:layout_weight="1"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvNickname"
@@ -56,12 +56,12 @@
             android:paddingLeft="14dp"
             android:paddingRight="14dp"
             android:paddingTop="6dp"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true" >
+                android:layout_centerInParent="true">
 
                 <View
                     android:layout_width="11dp"
@@ -84,7 +84,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="202dp"
-        android:background="#fff5f5f5" >
+        android:background="#fff5f5f5">
 
         <cn.sharerec.gui.components.AsyncImageView
             android:id="@+id/aivUploadingThumb"
@@ -132,7 +132,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:layout_marginBottom="11dp" >
+        android:layout_marginBottom="11dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -140,7 +140,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="13dp"
             android:layout_weight="1"
-            android:background="@drawable/srec_signin_btn_back" >
+            android:background="@drawable/srec_signin_btn_back">
 
             <View
                 android:id="@+id/vUploadProgress"
@@ -173,5 +173,4 @@
             android:textColor="#ff919191"
             android:textSize="12dp" />
     </LinearLayout>
-
 </LinearLayout>

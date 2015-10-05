@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:background="#ff3d4a4e" >
+        android:background="#ff3d4a4e">
 
         <cn.sharerec.gui.components.AsyncImageView
             android:id="@+id/aivLogo"
@@ -45,5 +45,4 @@
             android:textColor="#ffffffff"
             android:textSize="16dp" />
     </RelativeLayout>
-
 </LinearLayout>

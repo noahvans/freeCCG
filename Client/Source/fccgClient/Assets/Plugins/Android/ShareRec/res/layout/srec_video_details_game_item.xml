@@ -7,7 +7,7 @@
     android:paddingBottom="4dp"
     android:paddingLeft="14dp"
     android:paddingRight="14dp"
-    android:paddingTop="4dp" >
+    android:paddingTop="4dp">
 
     <cn.sharerec.gui.components.AsyncImageView
         android:id="@+id/aivGameIcon"
@@ -22,7 +22,7 @@
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         android:layout_weight="1"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvGameName"
@@ -54,5 +54,4 @@
         android:text="@string/srec_download_game"
         android:textColor="#ffbac0c3"
         android:textSize="14dp" />
-
 </LinearLayout>

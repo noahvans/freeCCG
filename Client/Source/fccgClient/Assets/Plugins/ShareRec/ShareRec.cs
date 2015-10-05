@@ -1,8 +1,5 @@
-﻿using UnityEngine;
-using System;
-using System.Collections;
-
-namespace cn.sharerec {
+﻿namespace cn.sharerec
+{
 #if UNITY_ANDROID
 
 	public class ShareRec : MonoBehaviour {
@@ -19,7 +16,7 @@ namespace cn.sharerec {
 		private static ShareRec instance;
 		public string AppKey = "76684bc49b3";
 		private JavaInterface javaInter;
-		
+
 		private int curAction;
 		public static OnRecorderStarting OnRecorderStartingHandler;
 		public static OnRecorderStarted OnRecorderStartedHandler;
@@ -227,8 +224,7 @@ namespace cn.sharerec {
 		/// 此方法在录制模块停止后被调用(This method will be called when the recorder module is stopped.)
 		/// </summary>
 		public delegate void OnRecorderStopped();
-		
 	}
-	
+
 #endif
 }

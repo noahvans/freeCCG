@@ -2,18 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bcPage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/llSignupLayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="43dp" >
+            android:layout_height="43dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             <LinearLayout
                 android:id="@+id/llGoSignin"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,13 +62,13 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/srec_signin_account_back"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:paddingLeft="17dp"
-                android:paddingRight="17dp" >
+                android:paddingRight="17dp">
 
                 <View
                     android:layout_width="17dp"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:paddingLeft="17dp"
-                android:paddingRight="17dp" >
+                android:paddingRight="17dp">
 
                 <View
                     android:layout_width="17dp"
@@ -133,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:paddingLeft="17dp"
-                android:paddingRight="17dp" >
+                android:paddingRight="17dp">
 
                 <View
                     android:layout_width="17dp"
@@ -179,7 +179,7 @@
         android:id="@+id/llSigninLayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -204,13 +204,13 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/srec_signin_account_back"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:paddingLeft="17dp"
-                android:paddingRight="17dp" >
+                android:paddingRight="17dp">
 
                 <View
                     android:layout_width="17dp"
@@ -242,7 +242,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:paddingLeft="17dp"
-                android:paddingRight="17dp" >
+                android:paddingRight="17dp">
 
                 <View
                     android:layout_width="17dp"
@@ -269,7 +269,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="47dp" >
+            android:layout_height="47dp">
 
             <TextView
                 android:id="@+id/tvGoSignup"
@@ -297,5 +297,4 @@
                 android:textSize="16dp" />
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

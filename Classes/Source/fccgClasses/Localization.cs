@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Noahv.Game.Fccg
 {
@@ -22,7 +21,7 @@ namespace Noahv.Game.Fccg
             for (int i = 0; i < 2; i++)//Note to change the number '2' while localizing new languages
             {
                 m_locStrings.Add(new Dictionary<string, string>(lData.Length));
-                foreach(var lRow in lData)
+                foreach (var lRow in lData)
                 {
                     var lRowData = lRow.Split('\t');
                     m_locStrings[i].Add(lRowData[0], lRowData[i + 1]);

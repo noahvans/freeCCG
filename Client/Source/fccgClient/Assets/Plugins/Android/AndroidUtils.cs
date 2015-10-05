@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
-
-namespace cn.sharesdk.unity3d {
+﻿namespace cn.sharesdk.unity3d
+{
 #if UNITY_ANDROID
 	public class AndroidUtils {
 		private static AndroidUtils instance;
@@ -125,7 +122,7 @@ namespace cn.sharesdk.unity3d {
 		}
 
 		/// <summary>
-		/// OGUI share to the specified platform. 
+		/// OGUI share to the specified platform.
 		/// </summary>
 		/// <param name="platform">Platform.</param>
 		/// <param name="content">Content.</param>
@@ -247,7 +244,6 @@ namespace cn.sharesdk.unity3d {
 				} break;
 			}
 		}
-		
 	}
 #endif
 }

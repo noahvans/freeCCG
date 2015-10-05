@@ -7,7 +7,7 @@
     android:paddingBottom="4dp"
     android:paddingLeft="14dp"
     android:paddingRight="14dp"
-    android:paddingTop="4dp" >
+    android:paddingTop="4dp">
 
     <cn.sharerec.gui.components.AsyncImageView
         android:id="@+id/aivOwnerAvatar"
@@ -22,7 +22,7 @@
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         android:layout_weight="1"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvOwnerName"
@@ -49,12 +49,12 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/srec_comment_back"
         android:paddingLeft="14dp"
-        android:paddingRight="14dp" >
+        android:paddingRight="14dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true" >
+            android:layout_centerInParent="true">
 
             <View
                 android:layout_width="11dp"
@@ -72,5 +72,4 @@
                 android:textSize="12dp" />
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>

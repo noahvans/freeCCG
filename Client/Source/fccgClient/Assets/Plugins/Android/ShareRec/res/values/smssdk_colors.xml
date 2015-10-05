@@ -2,7 +2,7 @@
 <resources>
     <drawable name="smssdk_dialog_btn_nor">#00000000</drawable>
     <drawable name="smssdk_dialog_btn_pre">#ff282a2b</drawable>
-    
+
 	<color name="smssdk_white">#ffffffff</color>
 	<color name="smssdk_gray_press">#fff2f2f2</color>
 	<color name="smssdk_transparent">#00000000</color>

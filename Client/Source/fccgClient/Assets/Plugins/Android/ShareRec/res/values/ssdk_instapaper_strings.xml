@@ -64,10 +64,10 @@ function login(form){
 <form style=\"margin-top:45px;\" action=\"%s\" metho=\"get\" onsubmit=\"return login(this);\">
 %s
 <div style=\"padding-left:15px;border-top:1px solid #E3E3E5;border-bottom:1px solid #E3E3E5;\">
- <input class=\"inputstyle\" id=\"u\" name=\"u\" type=\"text\" placeholder=\"%s\" style=\"border-bottom:1px solid #E3E3E5;\"/>
- <input class=\"inputstyle\" id=\"p\" name=\"p\" type=\"password\" placeholder=\"%s\"/>
+ <input class=\"inputstyle\" id=\"u\" name=\"u\" type=\"text\" placeholder=\"%s\" style=\"border-bottom:1px solid #E3E3E5;\" />
+ <input class=\"inputstyle\" id=\"p\" name=\"p\" type=\"password\" placeholder=\"%s\" />
 </div>
-<p><input style=\"margin:0 auto;\" type=\"submit\" name=\"s\" value=\"  %s  \" class=\"btn\"/></p>
+<p><input style=\"margin:0 auto;\" type=\"submit\" name=\"s\" value=\"  %s  \" class=\"btn\" /></p>
 </form>
 </body>
 </html>

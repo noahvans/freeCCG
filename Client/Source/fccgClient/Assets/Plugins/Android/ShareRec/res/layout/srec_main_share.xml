@@ -3,7 +3,7 @@
     android:id="@+id/llShare"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -23,21 +23,21 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp" >
+                android:padding="5dp">
 
                 <RelativeLayout
                     android:layout_width="135dp"
-                    android:layout_height="100dp" >
+                    android:layout_height="100dp">
 
                     <ImageView
                         android:id="@+id/ivShareThumb"
@@ -87,7 +87,7 @@
                 android:layout_marginBottom="3dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="12dp" >
+                android:layout_marginTop="12dp">
 
                 <FrameLayout
                     android:id="@+id/flShareToSinaWeibo"
@@ -95,12 +95,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/srec_share_share_back_left_top" >
+                    android:background="@drawable/srec_share_share_back_left_top">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center" >
+                        android:layout_gravity="center">
 
                         <ImageView
                             android:layout_width="19dp"
@@ -127,12 +127,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/srec_share_share_back_right_top" >
+                    android:background="@drawable/srec_share_share_back_right_top">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center" >
+                        android:layout_gravity="center">
 
                         <ImageView
                             android:layout_width="19dp"
@@ -160,7 +160,7 @@
                 android:layout_marginBottom="12dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="3dp" >
+                android:layout_marginTop="3dp">
 
                 <FrameLayout
                     android:id="@+id/flShareToFacebook"
@@ -168,12 +168,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/srec_share_share_back_left_bottom" >
+                    android:background="@drawable/srec_share_share_back_left_bottom">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center" >
+                        android:layout_gravity="center">
 
                         <ImageView
                             android:layout_width="19dp"
@@ -200,12 +200,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/srec_share_share_back_right_bottom" >
+                    android:background="@drawable/srec_share_share_back_right_bottom">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center" >
+                        android:layout_gravity="center">
 
                         <ImageView
                             android:layout_width="19dp"
@@ -234,14 +234,14 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/srec_signin_btn_back" >
+                android:background="@drawable/srec_signin_btn_back">
 
                 <View
                     android:id="@+id/vShareUploadProgress"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/srec_main_share_progress" />
-				
+
                 <TextView
                     android:id="@+id/tvShareUpload"
                     android:layout_width="match_parent"
@@ -250,7 +250,7 @@
                     android:text="@string/srec_upload_video"
                     android:textColor="#ffffffff"
                     android:textSize="18dp" />
-                
+
 				<TextView
                     android:id="@+id/tvShareFileSize"
                     android:layout_marginBottom="2dp"
@@ -264,5 +264,4 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

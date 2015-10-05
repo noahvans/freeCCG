@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="5dp"
-    android:paddingRight="5dp" >
+    android:paddingRight="5dp">
 
     <RelativeLayout
         android:id="@+id/rlThumb"
         android:layout_width="188dp"
         android:layout_height="113dp"
-        android:background="@drawable/srec_video_item_left_bg_land" >
+        android:background="@drawable/srec_video_item_left_bg_land">
 
         <cn.sharerec.gui.components.AsyncImageView
             android:id="@+id/aivThumb"
@@ -49,7 +49,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/rlThumb"
         android:background="@drawable/srec_video_item_right_top_bg_land"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvTitle"
@@ -101,7 +101,7 @@
         android:layout_below="@id/llTitle"
         android:layout_toLeftOf="@id/aivAvatar"
         android:layout_toRightOf="@id/rlThumb"
-        android:background="@drawable/srec_video_item_right_bottom_bg_land" >
+        android:background="@drawable/srec_video_item_right_bottom_bg_land">
 
         <TextView
             android:layout_width="wrap_content"
@@ -158,5 +158,4 @@
             android:textColor="#ff919191"
             android:textSize="12dp" />
     </LinearLayout>
-
 </RelativeLayout>

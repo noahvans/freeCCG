@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id ="@+id/rl_lv_item_bg"
     android:layout_width="match_parent"
-    android:layout_height="60dip" 
+    android:layout_height="60dip"
     android:padding="10dip"
     android:gravity="center_vertical"
     android:background="#ffffffff">
@@ -12,8 +12,8 @@
         android:layout_width="41dip"
         android:layout_height="41dip"
         android:layout_alignParentLeft="true"
-        android:scaleType="centerInside"/>
-	<LinearLayout 
+        android:scaleType="centerInside" />
+	<LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/iv_contact"
@@ -25,7 +25,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textColor="#333333"
-	        android:textSize="17sp"/>
+	        android:textSize="17sp" />
 	    <TextView
 	        android:id="@+id/tv_contact"
 	        android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
 	        android:textColor="#999999"
 	        android:textSize="13sp" />
 	</LinearLayout>
-	<Button 
+	<Button
         android:id="@+id/btn_add"
         android:layout_width="60dip"
         android:layout_height="30dip"
@@ -42,5 +42,5 @@
         android:text="@string/smssdk_add_contact"
         android:textSize="14sp"
         android:textColor="#797979"
-        android:background="@drawable/smssdk_corners_bg"/>
+        android:background="@drawable/smssdk_corners_bg" />
 </RelativeLayout>

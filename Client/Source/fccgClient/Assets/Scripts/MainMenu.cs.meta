@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4c9b4d7c520dad64bbd8a757141ea55b
+timeCreated: 1443976644
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - pnl_SettingsMenu: {fileID: 181356, guid: e16911017bdd93b48b0f879ce006e6bc, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

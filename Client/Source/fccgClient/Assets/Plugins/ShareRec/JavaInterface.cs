@@ -1,7 +1,5 @@
-using System;
-using UnityEngine;
-
-namespace cn.sharerec {
+namespace cn.sharerec
+{
 #if UNITY_ANDROID
 
 	public class JavaInterface {
@@ -130,7 +128,6 @@ namespace cn.sharerec {
 				javaRecorder.Call("setBitRate", bitRate);
 			}
 		}
-
 	}
 
 #endif

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Noahv.Game.Fccg
+namespace Noahv.Game.Fccg.Client
 {
     public class SettingsMenu : MonoBehaviour
     {

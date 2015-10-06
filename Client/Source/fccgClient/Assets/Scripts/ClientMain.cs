@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Noahv.Game.Fccg
+namespace Noahv.Game.Fccg.Client
 {
     public class ClientMain : MonoBehaviour
     {

@@ -33,9 +33,16 @@ namespace Noahv.Game.Fccg.Client
                         break;
 
                     case "btn_About":
+                        btn.onClick.AddListener(() =>
+                        {
+                            var pnl_AboutWindow = GameObject.Find("Canvas").transform.Find("pnl_AboutWindow").gameObject;
+                            this.gameObject.SetActive(false);
+                            pnl_AboutWindow.SetActive(true);
+                        });
                         break;
                 }
             }
+            this.gameObject.SetActive(false);
         }
 
         private void OnEnable()

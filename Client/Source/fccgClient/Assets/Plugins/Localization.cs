@@ -29,7 +29,15 @@ namespace Noahv.Game.Fccg.Client
             }
         }
 
-        //Call this to get localized strings
+        /// <summary>
+        /// Call this to get localized strings
+        /// </summary>
+        /// <param name="locKeyName">
+        /// Key name for localized string
+        /// </param>
+        /// <returns>
+        /// localized string which '\n' was parsed to a new line
+        /// </returns>
         public static string GetString(string locKeyName)
         {
             if (m_locStrings == null ||
@@ -38,7 +46,7 @@ namespace Noahv.Game.Fccg.Client
                 return string.Empty;
             var currentDic = m_locStrings[(int)GameSettings.Current.Language];
             if (currentDic.ContainsKey(locKeyName))
-                return currentDic[locKeyName];
+                return currentDic[locKeyName].Replace("\\n", "\n");
             else
                 return string.Empty;
         }

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../Common/SuperSocket.Common.Net45.csproj",
+      "bin": {
+        "assembly": "../../Common/obj/{configuration}/SuperSocket.Common.dll",
+        "pdb": "../../Common/obj/{configuration}/SuperSocket.Common.pdb"
+      },
+      "dependencies": {
+        "log4net": "1.0.0-*"
+      }
+    }
+  }
+}

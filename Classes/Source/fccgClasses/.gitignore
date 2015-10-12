@@ -53,15 +53,14 @@ Library/
 # ===================================== #
 ExportedObj/
 obj/
+warp/
+artifacts/
 *.svd
 *.userprefs
-/*.csproj
 *.pidb
 *.suo
-/*.sln
 *.user
-*.unityproj
-*.booproj
+*.lock.json
 
 # ============ #
 # OS generated #

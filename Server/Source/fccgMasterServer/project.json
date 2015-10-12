@@ -1,0 +1,18 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "fccgMasterServer Console Application",
+    "authors": [ "NoahV" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "StackExchange.Redis": "1.0.481"
+    },
+
+    "commands": {
+        "fccgMasterServer": "fccgMasterServer"
+    },
+
+    "compile": "..\\..\\..\\Classes\\Source\\fccgClasses\\*.cs"
+}

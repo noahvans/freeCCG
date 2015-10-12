@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0-*",
+    "description": "fccgConnectionServer Console Application",
+    "authors": [ "NoahV" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "StackExchange.Redis": "1.0.481"
+    },
+
+    "commands": {
+        "fccgConnectionServer": "fccgConnectionServer"
+    },
+
+    "compile": "..\\..\\..\\Classes\\Source\\fccgClasses\\*.cs"
+}

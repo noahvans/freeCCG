@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../SocketEngine/SuperSocket.SocketEngine.Net45.csproj",
+      "bin": {
+        "assembly": "../../SocketEngine/obj/{configuration}/SuperSocket.SocketEngine.dll",
+        "pdb": "../../SocketEngine/obj/{configuration}/SuperSocket.SocketEngine.pdb"
+      },
+      "dependencies": {
+        "SuperSocket.Common": "1.0.0-*",
+        "SuperSocket.SocketBase": "1.0.0-*"
+      }
+    }
+  }
+}

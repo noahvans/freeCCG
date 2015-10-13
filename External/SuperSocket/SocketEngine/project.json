@@ -1,0 +1,21 @@
+{
+    "version": "1.6.5.0",
+    "description": "SuperSocket.SocketEngine",
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Runtime.Remoting": "4.0.0.0"
+            }
+        }
+    },
+    "compilationOptions": {
+        "define": [ "Dnx" ]
+    },
+    "dependencies": {
+        "Common": "1.6.5.0",
+        "SocketBase": "1.6.5.0"
+    }
+}

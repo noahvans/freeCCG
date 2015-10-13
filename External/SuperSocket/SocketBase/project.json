@@ -1,0 +1,14 @@
+{
+    "version": "1.6.5.0",
+    "description": "SuperSocket.SocketBase",
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "frameworks": {
+        "dnx451": { }
+    },
+    "dependencies": {
+        "Common": "1.6.5.0",
+        "src": "1.2.12.0"
+    }
+}

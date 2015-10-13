@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "fccgMasterServer", "Source\fccgMasterServer\fccgMasterServer.xproj", "{18C2250C-52F3-455C-A274-B7289AA801C5}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "fccgConnectionServer", "Source\fccgConnectionServer\fccgConnectionServer.xproj", "{8A7BF6EE-5E50-42CA-BAE0-32234B1C8F40}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "fccgClasses", "..\Classes\Source\fccgClasses\fccgClasses.shproj", "{E3C5FCFE-BAD1-40E8-9DB7-232852C88C09}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "log4net.vs2015", "..\External\log4net\src\log4net.vs2015.xproj", "{6015EB8A-4857-41A8-B2E1-78CB53D48AB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95FDFB4B-5725-4EBB-9190-39747419A5BB}"
+	ProjectSection(SolutionItems) = preProject
+		..\External\log4net\src\global.json = ..\External\log4net\src\global.json
+		..\External\SuperSocket\global.json = ..\External\SuperSocket\global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SuperSocket.Common.Dnx", "..\External\SuperSocket\Common\SuperSocket.Common.Dnx.xproj", "{779504D8-9BB2-44F0-B497-7FC841EF5BAB}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SuperSocket.SocketBase.Dnx", "..\External\SuperSocket\SocketBase\SuperSocket.SocketBase.Dnx.xproj", "{BEB7461C-B12B-4234-9551-A05263852802}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SuperSocket.SocketEngine.Dnx", "..\External\SuperSocket\SocketEngine\SuperSocket.SocketEngine.Dnx.xproj", "{18F7F5BE-7E98-41CE-BD70-59089AC221CC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Classes\Source\fccgClasses\fccgClasses.projitems*{e3c5fcfe-bad1-40e8-9db7-232852c88c09}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18C2250C-52F3-455C-A274-B7289AA801C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C2250C-52F3-455C-A274-B7289AA801C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C2250C-52F3-455C-A274-B7289AA801C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C2250C-52F3-455C-A274-B7289AA801C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7BF6EE-5E50-42CA-BAE0-32234B1C8F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7BF6EE-5E50-42CA-BAE0-32234B1C8F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7BF6EE-5E50-42CA-BAE0-32234B1C8F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7BF6EE-5E50-42CA-BAE0-32234B1C8F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6015EB8A-4857-41A8-B2E1-78CB53D48AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6015EB8A-4857-41A8-B2E1-78CB53D48AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6015EB8A-4857-41A8-B2E1-78CB53D48AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6015EB8A-4857-41A8-B2E1-78CB53D48AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779504D8-9BB2-44F0-B497-7FC841EF5BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779504D8-9BB2-44F0-B497-7FC841EF5BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779504D8-9BB2-44F0-B497-7FC841EF5BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779504D8-9BB2-44F0-B497-7FC841EF5BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB7461C-B12B-4234-9551-A05263852802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB7461C-B12B-4234-9551-A05263852802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB7461C-B12B-4234-9551-A05263852802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB7461C-B12B-4234-9551-A05263852802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F7F5BE-7E98-41CE-BD70-59089AC221CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F7F5BE-7E98-41CE-BD70-59089AC221CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F7F5BE-7E98-41CE-BD70-59089AC221CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F7F5BE-7E98-41CE-BD70-59089AC221CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

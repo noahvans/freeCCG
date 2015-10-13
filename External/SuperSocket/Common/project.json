@@ -1,0 +1,18 @@
+{
+    "version": "1.6.5.0",
+    "description": "SuperSocket.Comm",
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "frameworks": {
+        "dnx451": { }
+    },
+    
+    "compilationOptions": {
+        "define": [ "Dnx" ]
+    },
+
+    "dependencies": {
+        "src": "1.2.12.0"
+    }
+}

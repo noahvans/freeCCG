@@ -7,7 +7,12 @@
     "licenseUrl": "",
 
     "dependencies": {
-        "StackExchange.Redis": "1.0.481"
+        "StackExchange.Redis": "1.0.0.1"
+    },
+
+    "frameworks": {
+        "dnx451": {
+        }
     },
 
     "commands": {

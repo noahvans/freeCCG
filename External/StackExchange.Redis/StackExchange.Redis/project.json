@@ -1,0 +1,21 @@
+﻿{
+    "version": "1.0.0.0001",
+    "description": "StackExchange.Redis for DNX",
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "exclude": [ "packages/*.*" ],
+
+    "compilationOptions": {
+        "allowUnsafe": true
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.IO.Compression": "4.0.0.0"
+            }
+        }
+    }
+}

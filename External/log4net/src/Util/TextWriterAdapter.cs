@@ -88,7 +88,7 @@ namespace log4net.Util
 		#endregion Protected Instance Properties
 
 		#region Public Properties
-    
+	
 		/// <summary>
 		/// The Encoding in which the output is written
 		/// </summary>
@@ -143,18 +143,6 @@ namespace log4net.Util
 		#region Public Methods
 
 		/// <summary>
-		/// Closes the writer and releases any system resources associated with the writer
-		/// </summary>
-		/// <remarks>
-		/// <para>
-		/// </para>
-		/// </remarks>
-		override public void Close() 
-		{
-			m_writer.Close();
-		}
-
-		/// <summary>
 		/// Dispose this writer
 		/// </summary>
 		/// <param name="disposing">flag indicating if we are being disposed</param>
@@ -198,7 +186,7 @@ namespace log4net.Util
 		{
 			m_writer.Write(value);
 		}
-    
+	
 		/// <summary>
 		/// Writes a character buffer to the wrapped TextWriter
 		/// </summary>
@@ -214,7 +202,7 @@ namespace log4net.Util
 		{
 			m_writer.Write(buffer, index, count);
 		}
-    
+	
 		/// <summary>
 		/// Writes a string to the wrapped TextWriter
 		/// </summary>

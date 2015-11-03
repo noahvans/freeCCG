@@ -1434,7 +1434,7 @@ namespace StackExchange.Redis
             Dictionary<string, int> uniques = null;
             if (useTieBreakers)
             {   // count the votes
-                uniques = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
+                uniques = new Dictionary<string, int>(StringComparer.CurrentCultureIgnoreCase);
                 await WaitAllIgnoreErrorsAsync(tieBreakers, 50, log).ForAwait();
                 for (int i = 0; i < tieBreakers.Length; i++)
                 {

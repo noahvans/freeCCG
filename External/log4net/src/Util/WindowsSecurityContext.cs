@@ -29,9 +29,9 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
-using System.Security.Permissions;
 
 using log4net.Core;
+using Microsoft.Win32.SafeHandles;
 
 namespace log4net.Util
 {
@@ -76,7 +76,7 @@ namespace log4net.Util
 
 		private ImpersonationMode m_impersonationMode = ImpersonationMode.User;
 		private string m_userName;
-		private string m_domainName = Environment.MachineName;
+		private string m_domainName = Environment.GetEnvironmentVariable("MachineName");
 		private string m_password;
 		private WindowsIdentity m_identity;
 
@@ -247,18 +247,6 @@ namespace log4net.Util
 		/// </remarks>
 		public override IDisposable Impersonate(object state)
 		{
-			if (m_impersonationMode == ImpersonationMode.User)
-			{
-				if (m_identity != null)
-				{
-					return new DisposableImpersonationContext(m_identity.Impersonate());
-				}
-			}
-			else if (m_impersonationMode == ImpersonationMode.Process)
-			{
-				// Impersonate(0) will revert to the process credentials
-				return new DisposableImpersonationContext(WindowsIdentity.Impersonate(IntPtr.Zero));
-			}
 			return null;
 		}
 
@@ -276,10 +264,9 @@ namespace log4net.Util
 		/// </para>
 		/// </remarks>
 #if NET_4_0
-        [System.Security.SecuritySafeCritical]
+		[System.Security.SecuritySafeCritical]
 #endif
-        [System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.Demand, UnmanagedCode = true)]
-        private static WindowsIdentity LogonUser(string userName, string domainName, string password)
+		private static WindowsIdentity LogonUser(string userName, string domainName, string password)
 		{
 			const int LOGON32_PROVIDER_DEFAULT = 0;
 			//This parameter causes LogonUser to create a primary token.
@@ -325,10 +312,10 @@ namespace log4net.Util
 		[DllImport("advapi32.dll", SetLastError=true)]
 		private static extern bool LogonUser(String lpszUsername, String lpszDomain, String lpszPassword, int dwLogonType, int dwLogonProvider, ref IntPtr phToken);
 
-		[DllImport("kernel32.dll", CharSet=CharSet.Auto)]
+		[DllImport("kernel32.dll", CharSet=CharSet.Unicode)]
 		private extern static bool CloseHandle(IntPtr handle);
 
-		[DllImport("advapi32.dll", CharSet=CharSet.Auto, SetLastError=true)]
+		[DllImport("advapi32.dll", CharSet=CharSet.Unicode, SetLastError=true)]
 		private extern static bool DuplicateToken(IntPtr ExistingTokenHandle, int SECURITY_IMPERSONATION_LEVEL, ref IntPtr DuplicateTokenHandle);
 
 		#endregion
@@ -346,22 +333,6 @@ namespace log4net.Util
 		/// </remarks>
 		private sealed class DisposableImpersonationContext : IDisposable
 		{
-			private readonly WindowsImpersonationContext m_impersonationContext;
-
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			/// <param name="impersonationContext">the impersonation context being wrapped</param>
-			/// <remarks>
-			/// <para>
-			/// Constructor
-			/// </para>
-			/// </remarks>
-			public DisposableImpersonationContext(WindowsImpersonationContext impersonationContext)
-			{
-				m_impersonationContext = impersonationContext;
-			}
-
 			/// <summary>
 			/// Revert the impersonation
 			/// </summary>
@@ -372,7 +343,6 @@ namespace log4net.Util
 			/// </remarks>
 			public void Dispose()
 			{
-				m_impersonationContext.Undo();
 			}
 		}
 

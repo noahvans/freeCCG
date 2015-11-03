@@ -72,11 +72,11 @@ namespace log4net.Util.PatternStringConverters
 		/// </remarks>
 		public void ActivateOptions()
 		{
-			if (string.Compare(Option, "DOS", true, System.Globalization.CultureInfo.InvariantCulture) == 0)
+			if (string.Compare(Option, "DOS", StringComparison.CurrentCultureIgnoreCase) == 0)
 			{
 				Option = "\r\n";
 			}
-			else if (string.Compare(Option, "UNIX", true, System.Globalization.CultureInfo.InvariantCulture) == 0)
+			else if (string.Compare(Option, "UNIX", StringComparison.CurrentCultureIgnoreCase) == 0)
 			{
 				Option = "\n";
 			}

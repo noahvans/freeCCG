@@ -27,14 +27,6 @@ namespace SuperSocket.Common
             catch
             {
             }
-
-            try
-            {
-                socket.Close();
-            }
-            catch
-            {
-            }
         }
 
         /// <summary>

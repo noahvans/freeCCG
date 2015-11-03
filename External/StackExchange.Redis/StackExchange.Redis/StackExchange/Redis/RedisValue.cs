@@ -1,8 +1,84 @@
 ﻿using System;
 using System.Text;
+using System.Reflection;
 
 namespace StackExchange.Redis
 {
+    internal static class TypeExtensionMethods
+    {
+        public static TypeCode GetTypeCode(this Type type)
+        {
+            if (type == null)
+            {
+                return TypeCode.Empty;
+            }
+            else if (type == typeof(Boolean))
+            {
+                return TypeCode.Boolean;
+            }
+            else if (type == typeof(Char))
+            {
+                return TypeCode.Char;
+            }
+            else if (type == typeof(SByte))
+            {
+                return TypeCode.SByte;
+            }
+            else if (type == typeof(Byte))
+            {
+                return TypeCode.Byte;
+            }
+            else if (type == typeof(Int16))
+            {
+                return TypeCode.Int16;
+            }
+            else if (type == typeof(UInt16))
+            {
+                return TypeCode.UInt16;
+            }
+            else if (type == typeof(Int32))
+            {
+                return TypeCode.Int32;
+            }
+            else if (type == typeof(UInt32))
+            {
+                return TypeCode.UInt32;
+            }
+            else if (type == typeof(Int64))
+            {
+                return TypeCode.Int64;
+            }
+            else if (type == typeof(UInt64))
+            {
+                return TypeCode.UInt64;
+            }
+            else if (type == typeof(Single))
+            {
+                return TypeCode.Single;
+            }
+            else if (type == typeof(Double))
+            {
+                return TypeCode.Double;
+            }
+            else if (type == typeof(Decimal))
+            {
+                return TypeCode.Decimal;
+            }
+            else if (type == typeof(DateTime))
+            {
+                return TypeCode.DateTime;
+            }
+            else if (type == typeof(String))
+            {
+                return TypeCode.String;
+            }
+            else
+            {
+                return TypeCode.Object;
+            }
+        }
+    }
+
     /// <summary>
     /// Represents values that can be stored in redis
     /// </summary>
@@ -218,7 +294,7 @@ namespace StackExchange.Redis
             result = 0;
             if (value == null || count <= 0) return false;
             checked
-            {   
+            {
                 bool neg = value[offset] == '-';
                 int max = offset + count;
                 for (int i = neg ? (offset + 1) : offset; i < max; i++)
@@ -237,7 +313,8 @@ namespace StackExchange.Redis
             if (IsNull) throw new ArgumentException("A null value is not valid in this context");
         }
 
-        enum CompareType {
+        enum CompareType
+        {
             Null, Int64, Double, Raw
         }
         CompareType ResolveType(out long i64, out double r8)
@@ -249,18 +326,18 @@ namespace StackExchange.Redis
                 r8 = default(double);
                 return CompareType.Int64;
             }
-            if(blob == null)
+            if (blob == null)
             {
                 i64 = default(long);
                 r8 = default(double);
                 return CompareType.Null;
             }
-            if(TryParseInt64(blob, 0, blob.Length, out i64))
+            if (TryParseInt64(blob, 0, blob.Length, out i64))
             {
                 r8 = default(double);
                 return CompareType.Int64;
             }
-            if(TryParseDouble(blob, out r8))
+            if (TryParseDouble(blob, out r8))
             {
                 i64 = default(long);
                 return CompareType.Double;
@@ -281,30 +358,30 @@ namespace StackExchange.Redis
                 double thisDouble, otherDouble;
                 CompareType thisType = this.ResolveType(out thisInt64, out thisDouble),
                     otherType = other.ResolveType(out otherInt64, out otherDouble);
-            
-                if(thisType == CompareType.Null)
+
+                if (thisType == CompareType.Null)
                 {
                     return otherType == CompareType.Null ? 0 : -1;
                 }
-                if(otherType == CompareType.Null)
+                if (otherType == CompareType.Null)
                 {
                     return 1;
                 }
 
-                if(thisType == CompareType.Int64)
+                if (thisType == CompareType.Int64)
                 {
                     if (otherType == CompareType.Int64) return thisInt64.CompareTo(otherInt64);
                     if (otherType == CompareType.Double) return ((double)thisInt64).CompareTo(otherDouble);
                 }
-                else if(thisType == CompareType.Double)
+                else if (thisType == CompareType.Double)
                 {
                     if (otherType == CompareType.Int64) return thisDouble.CompareTo((double)otherInt64);
                     if (otherType == CompareType.Double) return thisDouble.CompareTo(otherDouble);
                 }
                 // otherwise, compare as strings            
-                return StringComparer.InvariantCulture.Compare((string)this, (string)other);
+                return StringComparer.CurrentCultureIgnoreCase.Compare((string)this, (string)other);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ConnectionMultiplexer.TraceWithoutContext(ex.Message);
             }
@@ -408,7 +485,7 @@ namespace StackExchange.Redis
         /// </summary>
         public static explicit operator bool (RedisValue value)
         {
-            switch((long)value)
+            switch ((long)value)
             {
                 case 0: return false;
                 case 1: return true;
@@ -419,7 +496,7 @@ namespace StackExchange.Redis
         /// <summary>
         /// Converts the value to an Int32
         /// </summary>
-        public static explicit operator int(RedisValue value)
+        public static explicit operator int (RedisValue value)
         {
             checked
             {
@@ -429,7 +506,7 @@ namespace StackExchange.Redis
         /// <summary>
         /// Converts the value to an Int64
         /// </summary>
-        public static explicit operator long(RedisValue value)
+        public static explicit operator long (RedisValue value)
         {
             var blob = value.valueBlob;
             if (blob == IntegerSentinel) return value.valueInt64;
@@ -501,13 +578,13 @@ namespace StackExchange.Redis
         /// <summary>
         /// Converts the value to a String
         /// </summary>
-        public static implicit operator string(RedisValue value)
+        public static implicit operator string (RedisValue value)
         {
             var valueBlob = value.valueBlob;
             if (valueBlob == IntegerSentinel)
                 return Format.ToString(value.valueInt64);
             if (valueBlob == null) return null;
-            
+
             if (valueBlob.Length == 0) return "";
             try
             {
@@ -521,7 +598,7 @@ namespace StackExchange.Redis
         /// <summary>
         /// Converts the value to a byte[]
         /// </summary>
-        public static implicit operator byte[](RedisValue value)
+        public static implicit operator byte[] (RedisValue value)
         {
             var valueBlob = value.valueBlob;
             if (valueBlob == IntegerSentinel)
@@ -598,10 +675,10 @@ namespace StackExchange.Redis
 
         object IConvertible.ToType(Type conversionType, IFormatProvider provider)
         {
-            if (conversionType== null) throw new ArgumentNullException("conversionType");
-            if (conversionType== typeof(byte[])) return (byte[])this;
+            if (conversionType == null) throw new ArgumentNullException("conversionType");
+            if (conversionType == typeof(byte[])) return (byte[])this;
             if (conversionType == typeof(RedisValue)) return this;
-            switch(Type.GetTypeCode(conversionType))
+            switch (conversionType.GetTypeCode())
             {
                 case TypeCode.Boolean: return (bool)this;
                 case TypeCode.Byte: return (byte)this;

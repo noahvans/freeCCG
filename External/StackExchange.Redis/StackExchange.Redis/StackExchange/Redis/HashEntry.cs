@@ -29,12 +29,6 @@ namespace StackExchange.Redis
         public RedisValue Value{ get { return value; } }
 
         /// <summary>
-        /// The name of the hash field
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never), Obsolete("Please use Name", false)]
-        public RedisValue Key { get { return name; } }
-
-        /// <summary>
         /// Converts to a key/value pair
         /// </summary>
         public static implicit operator KeyValuePair<RedisValue, RedisValue>(HashEntry value)

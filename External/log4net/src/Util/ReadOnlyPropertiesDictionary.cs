@@ -20,7 +20,6 @@
 using System;
 using System.Collections;
 #if !NETCF
-using System.Runtime.Serialization;
 using System.Xml;
 #endif
 
@@ -44,7 +43,7 @@ namespace log4net.Util
 #if NETCF
 	public class ReadOnlyPropertiesDictionary : IDictionary
 #else
-	[Serializable] public class ReadOnlyPropertiesDictionary : ISerializable, IDictionary
+	public class ReadOnlyPropertiesDictionary : IDictionary
 #endif
 	{
 		#region Private Instance Fields
@@ -81,7 +80,7 @@ namespace log4net.Util
 		/// </remarks>
 		public ReadOnlyPropertiesDictionary(ReadOnlyPropertiesDictionary propertiesDictionary)
 		{
-			foreach(DictionaryEntry entry in propertiesDictionary)
+			foreach (DictionaryEntry entry in propertiesDictionary)
 			{
 				InnerHashtable.Add(entry.Key, entry.Value);
 			}
@@ -92,25 +91,6 @@ namespace log4net.Util
 		#region Private Instance Constructors
 
 #if !NETCF
-		/// <summary>
-		/// Deserialization constructor
-		/// </summary>
-		/// <param name="info">The <see cref="SerializationInfo" /> that holds the serialized object data.</param>
-		/// <param name="context">The <see cref="StreamingContext" /> that contains contextual information about the source or destination.</param>
-		/// <remarks>
-		/// <para>
-		/// Initializes a new instance of the <see cref="ReadOnlyPropertiesDictionary" /> class 
-		/// with serialized data.
-		/// </para>
-		/// </remarks>
-		protected ReadOnlyPropertiesDictionary(SerializationInfo info, StreamingContext context)
-		{
-			foreach(SerializationEntry entry in info)
-			{
-				// The keys are stored as Xml encoded names
-				InnerHashtable[XmlConvert.DecodeName(entry.Name)] = entry.Value;
-			}
-		}
 #endif
 
 		#endregion Protected Instance Constructors
@@ -193,39 +173,6 @@ namespace log4net.Util
 		#region Implementation of ISerializable
 
 #if !NETCF
-		/// <summary>
-		/// Serializes this object into the <see cref="SerializationInfo" /> provided.
-		/// </summary>
-		/// <param name="info">The <see cref="SerializationInfo" /> to populate with data.</param>
-		/// <param name="context">The destination for this serialization.</param>
-		/// <remarks>
-		/// <para>
-		/// Serializes this object into the <see cref="SerializationInfo" /> provided.
-		/// </para>
-		/// </remarks>
-#if NET_4_0
-        [System.Security.SecurityCritical]
-#else
-		[System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, SerializationFormatter=true)]
-#endif
-        public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
-		{
-			foreach(DictionaryEntry entry in InnerHashtable)
-			{
-				string entryKey = entry.Key as string;
-				object entryValue = entry.Value;
-
-				// If value is serializable then we add it to the list
-				if (entryKey != null && entryValue != null && entryValue.GetType().IsSerializable)
-				{
-					// Store the keys as an Xml encoded local name as it may contain colons (':') 
-					// which are NOT escaped by the Xml Serialization framework.
-					// This must be a bug in the serialization framework as we cannot be expected
-					// to know the implementation details of all the possible transport layers.
-					info.AddValue(XmlConvert.EncodeLocalName(entryKey), entryValue);
-				}
-			}
-		}
 #endif
 
 		#endregion Implementation of ISerializable

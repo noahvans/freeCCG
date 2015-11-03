@@ -128,13 +128,13 @@ namespace StackExchange.Redis
             if (outStream != null)
             {
                 multiplexer.Trace("Disconnecting...", physicalName);
-                try { outStream.Close(); } catch { }
+                //try { outStream.Close(); } catch { }
                 try { outStream.Dispose(); } catch { }
                 outStream = null;
             }
             if (netStream != null)
             {
-                try { netStream.Close(); } catch { }
+                //try { netStream.Close(); } catch { }
                 try { netStream.Dispose(); } catch { }
                 netStream = null;
             }

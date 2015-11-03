@@ -28,19 +28,7 @@ namespace StackExchange.Redis
         /// The score against the element
         /// </summary>
         public double Score { get { return score; } }
-
-        /// <summary>
-        /// The score against the element
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never), Obsolete("Please use Score", false)]
-        public double Value { get { return score; } }
-
-        /// <summary>
-        /// The unique element stored in the sorted set
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never), Obsolete("Please use Element", false)]
-        public RedisValue Key { get { return element; } }
-
+                
         /// <summary>
         /// Converts to a key/value pair
         /// </summary>

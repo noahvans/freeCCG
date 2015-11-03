@@ -127,7 +127,7 @@ namespace log4net.Util
 				m_errorHandler.Error("Failed to write [" + value + "].", e, ErrorCode.WriteFailure);
 			}
 		}
-    
+	
 		/// <summary>
 		/// Writes a buffer to the underlying writer
 		/// </summary>
@@ -150,7 +150,7 @@ namespace log4net.Util
 				m_errorHandler.Error("Failed to write buffer.", e, ErrorCode.WriteFailure);
 			}
 		}
-    
+	
 		/// <summary>
 		/// Writes a string to the output.
 		/// </summary>
@@ -170,20 +170,6 @@ namespace log4net.Util
 			{
 				m_errorHandler.Error("Failed to write [" + value + "].", e, ErrorCode.WriteFailure);
 			}
-		}
-
-		/// <summary>
-		/// Closes the underlying output writer.
-		/// </summary>
-		/// <remarks>
-		/// <para>
-		/// Closes the underlying output writer.
-		/// </para>
-		/// </remarks>
-		override public void Close()
-		{
-			m_closed = true;
-			base.Close();
 		}
 
 		#endregion Public Instance Methods

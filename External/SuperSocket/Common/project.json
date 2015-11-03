@@ -1,18 +1,20 @@
 {
-    "version": "1.6.5.0",
-    "description": "SuperSocket.Comm",
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
-    "frameworks": {
-        "dnx451": { }
-    },
-    
-    "compilationOptions": {
-        "define": [ "Dnx" ]
-    },
+  "version": "1.6.5.0",
+  "description": "SuperSocket.Comm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahvans/freeCCG"
+  },
 
-    "dependencies": {
-        "src": "1.2.12.0"
+  "dependencies": {
+  },
+
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "System.Net.Sockets": "4.1.0-*",
+        "System.Threading.ThreadPool": "4.0.10-*"
+      }
     }
+  }
 }

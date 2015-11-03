@@ -19,7 +19,6 @@
 
 using System;
 #if !NETCF
-using System.Runtime.Serialization;
 #endif
 
 namespace log4net.Core
@@ -37,9 +36,8 @@ namespace log4net.Core
 	/// <author>Nicko Cadell</author>
 	/// <author>Gert Driesen</author>
 #if !NETCF
-	[Serializable]
 #endif
-	public class LogException : ApplicationException 
+	public class LogException : Exception 
 	{
 		#region Public Instance Constructors
 
@@ -89,20 +87,6 @@ namespace log4net.Core
 		#region Protected Instance Constructors
 
 #if !NETCF
-		/// <summary>
-		/// Serialization constructor
-		/// </summary>
-		/// <param name="info">The <see cref="SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
-		/// <param name="context">The <see cref="StreamingContext" /> that contains contextual information about the source or destination.</param>
-		/// <remarks>
-		/// <para>
-		/// Initializes a new instance of the <see cref="LogException" /> class 
-		/// with serialized data.
-		/// </para>
-		/// </remarks>
-		protected LogException(SerializationInfo info, StreamingContext context) : base(info, context) 
-		{
-		}
 #endif
 
 		#endregion Protected Instance Constructors

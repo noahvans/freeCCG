@@ -24,6 +24,7 @@ using System.IO;
 using log4net.Util;
 using log4net.Util.PatternStringConverters;
 using log4net.Core;
+using System.Reflection;
 
 namespace log4net.Util
 {

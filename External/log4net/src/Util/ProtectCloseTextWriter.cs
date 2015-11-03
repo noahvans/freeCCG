@@ -74,20 +74,6 @@ namespace log4net.Util
 
 		#region Override Implementation of TextWriter
 
-		/// <summary>
-		/// Does not close the underlying output writer.
-		/// </summary>
-		/// <remarks>
-		/// <para>
-		/// Does not close the underlying output writer.
-		/// This method does nothing.
-		/// </para>
-		/// </remarks>
-		override public void Close()
-		{
-			// do nothing
-		}
-
 		#endregion Public Instance Methods
 	}
 }

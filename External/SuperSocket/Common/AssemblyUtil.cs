@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Reflection;
 using System.IO;
-using System.Linq;
 using System.Globalization;
 
 #if !SILVERLIGHT
-using System.Runtime.Serialization.Formatters.Binary;
 #endif
 
 namespace SuperSocket.Common
@@ -60,7 +57,7 @@ namespace SuperSocket.Common
 #if !NET35
         public static Type GetType(string fullTypeName, bool throwOnError, bool ignoreCase)
         {
-            var targetType = Type.GetType(fullTypeName, false, ignoreCase);
+            var targetType = Type.GetType(fullTypeName, false);
 
             if (targetType != null)
                 return targetType;
@@ -147,18 +144,16 @@ namespace SuperSocket.Common
         public static IEnumerable<TBaseInterface> GetImplementedObjectsByInterface<TBaseInterface>(this Assembly assembly, Type targetType)
             where TBaseInterface : class
         {
-            Type[] arrType = assembly.GetExportedTypes();
+            var arrType = assembly.ExportedTypes;
 
             var result = new List<TBaseInterface>();
 
-            for (int i = 0; i < arrType.Length; i++)
+            foreach (var currentImplementType in arrType)
             {
-                var currentImplementType = arrType[i];
-
-                if (currentImplementType.IsAbstract)
+                if (currentImplementType.GetTypeInfo().IsAbstract)
                     continue;
 
-                if (!targetType.IsAssignableFrom(currentImplementType))
+                if (!targetType.GetTypeInfo().IsAssignableFrom(currentImplementType.GetTypeInfo()))
                     continue;
 
                 result.Add((TBaseInterface)Activator.CreateInstance(currentImplementType));

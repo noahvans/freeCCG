@@ -34,7 +34,6 @@ namespace log4net.Util
 	/// <author>Nicko Cadell</author>
 	/// <author>Gert Driesen</author>
 #if !NETCF
-	[Serializable]
 #endif
 	public sealed class EmptyCollection : ICollection
 	{

@@ -65,8 +65,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 			m_lock = new System.Threading.ReaderWriterLockSlim();
-#else
-			m_lock = new System.Threading.ReaderWriterLock();
+#else       			
 #endif
 #endif
 		}
@@ -89,8 +88,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 			m_lock.EnterReadLock();
-#else
-			m_lock.AcquireReaderLock(-1);
+#else       			
 #endif
 #else
 			System.Threading.Monitor.Enter(this);
@@ -111,8 +109,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 			m_lock.ExitReadLock();
-#else
-			m_lock.ReleaseReaderLock();
+#else       			
 
 #endif
 #else
@@ -133,8 +130,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 			m_lock.EnterWriteLock();
-#else
-			m_lock.AcquireWriterLock(-1);
+#else       			
 #endif
 #else
 			System.Threading.Monitor.Enter(this);
@@ -155,8 +151,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 			m_lock.ExitWriteLock();
-#else
-			m_lock.ReleaseWriterLock();
+#else       			
 #endif
 #else
 			System.Threading.Monitor.Exit(this);
@@ -170,8 +165,7 @@ namespace log4net.Util
 #if HAS_READERWRITERLOCK
 #if HAS_READERWRITERLOCKSLIM
 		private System.Threading.ReaderWriterLockSlim m_lock;
-#else
-		private System.Threading.ReaderWriterLock m_lock;
+#else   		
 #endif
 
 #endif

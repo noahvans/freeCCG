@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 #if NETCF_1_0
 using Stack = log4net.Util.ThreadContextStack.Stack;

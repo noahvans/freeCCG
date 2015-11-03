@@ -1,23 +1,23 @@
 {
-    "version": "1.0.0-*",
-    "description": "fccgConnectionServer Console Application",
-    "authors": [ "NoahV" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+  "version": "1.0.0-*",
+  "description": "fccgConnectionServer Console Application",
+  "authors": [ "NoahV" ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahvans/freeCCG"
+  },
 
-    "dependencies": {
-        "StackExchange.Redis": "1.0.0.1"
-    },
+  "dependencies": {
+    "StackExchange.Redis": "1.0.0.1"
+  },
 
-    "frameworks": {
-        "dnx451": {
-        }
-    },
+  "frameworks": {
+    "dnxcore5": {
+    }
+  },
+  "compile": "..\\..\\..\\Classes\\Source\\fccgClasses\\*.cs",
 
-    "commands": {
-        "fccgConnectionServer": "fccgConnectionServer"
-    },
-
-    "compile": "..\\..\\..\\Classes\\Source\\fccgClasses\\*.cs"
+  "commands": {
+    "fccgConnectionServer": "fccgConnectionServer"
+  }
 }

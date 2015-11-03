@@ -1,24 +1,28 @@
-﻿{
-    "version": "1.2.12.0",
-    "description": "Apache log4net for DNX",
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+{
+  "version": "1.2.12.0",
+  "description": "Apache log4net for DNX",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahvans/freeCCG"
+  },
 
-    "exclude": [ "*.vb", "*.cpp", "*.js" ],
+  "dependencies": {
 
-    "compilationOptions": {
-        "define": [ "NET_2_0", "NET_4_0" ]
-    },
+  },
 
-    "frameworks": {
-        "dnx451": {
-            "frameworkAssemblies": {
-                "System.configuration": "4.0.0.0",
-                "System.Data": "4.0.0.0",
-                "System.Web": "4.0.0.0",
-                "System.XML": "4.0.0.0"
-            }
-        }
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "System.Runtime": "4.0.21-*",
+        "System.Collections.NonGeneric": "4.0.1-*",
+        "System.Security.Principal.Windows": "4.0.0-*",
+        "System.Text.RegularExpressions": "4.0.11-*",
+        "System.Xml.ReaderWriter": "4.0.11-*",
+        "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-*",
+        "System.Reflection.TypeExtensions": "4.0.1-*",
+        "System.Console": "4.0.0-*",
+        "System.Diagnostics.Process": "4.0.0-*"
+      }
     }
+  }
 }

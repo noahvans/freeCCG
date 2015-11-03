@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace StackExchange.Redis
@@ -126,8 +127,8 @@ namespace StackExchange.Redis
 
             // we need a dedicated writer, because when under heavy ambient load
             // (a busy asp.net site, for example), workers are not reliable enough
-            Thread dedicatedWriter = new Thread(writeAllQueues, 32 * 1024); // don't need a huge stack;
-            dedicatedWriter.Priority = ThreadPriority.AboveNormal; // time critical
+            Thread dedicatedWriter = new Thread(writeAllQueues); //, 32 * 1024); // don't need a huge stack;
+            //dedicatedWriter.Priority = ThreadPriority.AboveNormal; // time critical
             dedicatedWriter.Name = name + ":Write";
             dedicatedWriter.IsBackground = true; // should not keep process alive
             dedicatedWriter.Start(this); // will self-exit when disposed
@@ -189,18 +190,20 @@ namespace StackExchange.Redis
                 else
                 {
                     CompletionTypeHelper.RunWithCompletionType(
-                        (cb) => {
+                        (cb) =>
+                        {
                             multiplexer.LogLocked(log, "BeginConnect: {0}", formattedEndpoint);
                             return socket.BeginConnect(endpoint, cb, Tuple.Create(socket, callback));
                         },
-                        (ar) => {
+                        (ar) =>
+                        {
                             multiplexer.LogLocked(log, "EndConnect: {0}", formattedEndpoint);
                             EndConnectImpl(ar, multiplexer, log);
                             multiplexer.LogLocked(log, "Connect complete: {0}", formattedEndpoint);
                         },
                         connectCompletionType);
                 }
-            } 
+            }
             catch (NotImplementedException ex)
             {
                 if (!(endpoint is IPEndPoint))
@@ -220,15 +223,15 @@ namespace StackExchange.Redis
             const int SIO_LOOPBACK_FAST_PATH = -1744830448;
 
             // windows only
-            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                // Win8/Server2012+ only
-                var osVersion = Environment.OSVersion.Version;
-                if (osVersion.Major > 6 || osVersion.Major == 6 && osVersion.Minor >= 2)
-                {
-                    byte[] optionInValue = BitConverter.GetBytes(1);
-                    socket.IOControl(SIO_LOOPBACK_FAST_PATH, optionInValue, null);
-                }
+                // Win8/Server2012+ only, DNXCore not supported yet
+                //var osVersion = Environment.OSVersion.Version;
+                //if (osVersion.Major > 6 || osVersion.Major == 6 && osVersion.Minor >= 2)
+                //{
+                //    byte[] optionInValue = BitConverter.GetBytes(1);
+                //    socket.IOControl(SIO_LOOPBACK_FAST_PATH, optionInValue, null);
+                //}
             }
         }
 
@@ -292,7 +295,7 @@ namespace StackExchange.Redis
                         break;
                 }
             }
-            catch(ObjectDisposedException)
+            catch (ObjectDisposedException)
             {
                 multiplexer.LogLocked(log, "(socket shutdown)");
                 if (tuple != null)
@@ -305,7 +308,7 @@ namespace StackExchange.Redis
                     }
                 }
             }
-            catch(Exception outer)
+            catch (Exception outer)
             {
                 ConnectionMultiplexer.TraceWithoutContext(outer.Message);
                 if (tuple != null)
@@ -324,17 +327,17 @@ namespace StackExchange.Redis
         partial void OnShutdown(Socket socket);
 
         partial void ShouldIgnoreConnect(ISocketCallback callback, ref bool ignore);
-        
+
         partial void ShouldForceConnectCompletionType(ref CompletionType completionType);
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
+        [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         private void Shutdown(Socket socket)
         {
             if (socket != null)
             {
                 OnShutdown(socket);
                 try { socket.Shutdown(SocketShutdown.Both); } catch { }
-                try { socket.Close(); } catch { }
+                //try { socket.Close(); } catch { }
                 try { socket.Dispose(); } catch { }
             }
         }

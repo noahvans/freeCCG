@@ -7,3 +7,7 @@ btnExitSettings	Back	后退
 btnAbout	About	关于
 txtAbout	FCCG is a cross-platform free collectible card game application.\nThe FCCG client is created by noahv.\nAll source code can be found at "https://github.com/noahvans/freeCCG".\nYou can also contact noahvans@gmail.com for any information.\n\nPlanner: noahv\nDirector: noahv\nUI Designer: noahv\nArtist: noahv\nProgrammer: noahv\nAnimator: noahv\nMusician: noahv\nDubber: noahv	FCCG是一个免费的跨平台的集换式卡牌游戏应用。\n由noahv独立制作。\n项目所有源代码可在“https://github.com/noahvans/freeCCG”找到。\n你也可以通过noahvans@gmail.com来联络noahv获取更多信息。\n\n策划：noahv\n导演：noahv\n界面设计：noahv\n美术：noahv\n程序：noahv\n动画：noahv\n音乐：noahv\n配音：noahv
 btnCloseAbout	Back	后退
+plhUsername	Enter User Name...	请输入用户名...
+plhPassword	Enter Password...	请输入密码...
+btnLogin	Login/Create User	登录/注册
+btnExitLogin	Cancel	放弃

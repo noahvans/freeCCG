@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient/fccgClient.CSharp.Plugins", "fccgClient.CSharp.Plugins.csproj", "{85F13119-1C96-793D-5FE7-DC5CEBD86FC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient.CSharp.Plugins", "fccgClient.CSharp.Plugins.csproj", "{85F13119-1C96-793D-5FE7-DC5CEBD86FC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient/fccgClient.CSharp", "fccgClient.CSharp.csproj", "{253761B9-2348-970E-AF6B-96C941B6B47A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient.CSharp", "fccgClient.CSharp.csproj", "{253761B9-2348-970E-AF6B-96C941B6B47A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient/fccgClient.CSharp.Editor", "fccgClient.CSharp.Editor.csproj", "{620BEB2B-505A-98F4-7321-B154FBCA3E34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClient.CSharp.Editor", "fccgClient.CSharp.Editor.csproj", "{620BEB2B-505A-98F4-7321-B154FBCA3E34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fccgClasses", "..\..\..\Classes\Source\fccgClasses\fccgClasses.csproj", "{5654FDFD-CF80-4EFD-AE57-38E8AE35B67A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{620BEB2B-505A-98F4-7321-B154FBCA3E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{620BEB2B-505A-98F4-7321-B154FBCA3E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{620BEB2B-505A-98F4-7321-B154FBCA3E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5654FDFD-CF80-4EFD-AE57-38E8AE35B67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5654FDFD-CF80-4EFD-AE57-38E8AE35B67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5654FDFD-CF80-4EFD-AE57-38E8AE35B67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5654FDFD-CF80-4EFD-AE57-38E8AE35B67A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

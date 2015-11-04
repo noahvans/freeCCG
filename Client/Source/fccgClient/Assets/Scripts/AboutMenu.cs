@@ -10,7 +10,7 @@ namespace Noahv.Game.Fccg.Client
             // Initialization for the About window
             this.GetComponentInChildren<Button>().onClick.AddListener(() =>
             {
-                var pnl_SettingsMenu = GameObject.Find("Canvas").transform.Find("pnl_SettingsMenu").gameObject;
+                var pnl_SettingsMenu = GameObject.Find("MainCanvas").transform.Find("pnl_SettingsMenu").gameObject;
                 this.gameObject.SetActive(false);
                 pnl_SettingsMenu.SetActive(true);
             });

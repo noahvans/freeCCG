@@ -1,6 +1,5 @@
 {
     "sdk": {
-        "version": "1.0.0-rc1-15838"
-    },
-    "projects": [ "../External/StackExchange.Redis" ]
+        "version": "1.0.0-beta8"
+    }
 }

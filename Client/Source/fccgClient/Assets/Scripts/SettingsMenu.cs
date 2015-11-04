@@ -26,7 +26,7 @@ namespace Noahv.Game.Fccg.Client
                     case "btn_ExitSettings":
                         btn.onClick.AddListener(() =>
                         {
-                            var pnl_MainMenu = GameObject.Find("Canvas").transform.Find("pnl_MainMenu").gameObject;
+                            var pnl_MainMenu = GameObject.Find("MainCanvas").transform.Find("pnl_MainMenu").gameObject;
                             this.gameObject.SetActive(false);
                             pnl_MainMenu.SetActive(true);
                         });
@@ -35,7 +35,7 @@ namespace Noahv.Game.Fccg.Client
                     case "btn_About":
                         btn.onClick.AddListener(() =>
                         {
-                            var pnl_AboutWindow = GameObject.Find("Canvas").transform.Find("pnl_AboutWindow").gameObject;
+                            var pnl_AboutWindow = GameObject.Find("MainCanvas").transform.Find("pnl_AboutWindow").gameObject;
                             this.gameObject.SetActive(false);
                             pnl_AboutWindow.SetActive(true);
                         });

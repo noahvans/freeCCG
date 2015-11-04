@@ -24,7 +24,7 @@ namespace Noahv.Game.Fccg.Client
                     case "btn_SettingsAbout":
                         btn.onClick.AddListener(() =>
                         {
-                            var pnl_SettingsMenu = GameObject.Find("Canvas").transform.Find("pnl_SettingsMenu").gameObject;
+                            var pnl_SettingsMenu = GameObject.Find("MainCanvas").transform.Find("pnl_SettingsMenu").gameObject;
                             this.gameObject.SetActive(false);
                             pnl_SettingsMenu.SetActive(true);
                         });
